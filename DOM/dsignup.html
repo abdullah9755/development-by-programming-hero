@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>HopeHarbor Donor Signup</title>
+<style>
+    :root {
+        --navy-blue: #0a1d56;
+        --light-blue: #1a3a8f;
+        --accent-color: #ffa500;
+        --light-gray: #f5f5f5;
+        --white: #ffffff;
+    }
+    
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
+    body {
+        background-color: var(--light-gray);
+    }
+    
+    .signup-section {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 120px 20px 60px;
+        background: linear-gradient(rgba(10, 29, 86, 0.05), rgba(10, 29, 86, 0.05));
+    }
+    
+    .signup-container {
+        display: flex;
+        width: 100%;
+        max-width: 1000px;
+        background-color: var(--white);
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        flex-wrap: wrap;
+    }
+    
+    .signup-image {
+        flex: 1 1 350px;
+        background: linear-gradient(rgba(10, 29, 86, 0.7), rgba(10, 29, 86, 0.7)), url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=500&q=80') center/cover no-repeat;
+        color: var(--white);
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .signup-image h2 {
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
+    
+    .signup-image p {
+        font-size: 16px;
+        line-height: 1.6;
+        margin-bottom: 30px;
+    }
+    
+    .impact-stories {
+        display: flex;
+        flex-direction: column;
+        margin-top: 30px;
+    }
+    
+    .story-item {
+        margin-bottom: 25px;
+        padding-left: 20px;
+        border-left: 3px solid var(--accent-color);
+    }
+    
+    .story-item h3 {
+        font-size: 18px;
+        margin-bottom: 5px;
+    }
+    
+    .story-item p {
+        font-size: 14px;
+        margin-bottom: 0;
+        font-style: italic;
+    }
+    
+    .signup-form-container {
+        flex: 1 1 400px;
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .signup-header {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    
+    .signup-header h2 {
+        font-size: 28px;
+        color: var(--navy-blue);
+        margin-bottom: 10px;
+    }
+    
+    .signup-header p {
+        color: #666;
+    }
+    
+    .signup-form {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    
+    .form-group {
+        margin-bottom: 20px;
+    }
+    
+    .form-group label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 500;
+        color: var(--navy-blue);
+    }
+    
+    .form-group label .optional {
+        color: #999;
+        font-size: 14px;
+        font-weight: normal;
+    }
+    
+    .form-group input,
+    .form-group select {
+        width: 100%;
+        padding: 12px 15px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-size: 15px;
+        transition: border-color 0.3s;
+    }
+    
+    .form-group input:focus,
+    .form-group select:focus {
+        border-color: var(--light-blue);
+        outline: none;
+    }
+    
+    .terms-privacy {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 20px;
+    }
+    
+    .terms-privacy input {
+        margin-top: 5px;
+        margin-right: 10px;
+    }
+    
+    .terms-privacy label {
+        font-size: 14px;
+        color: #666;
+        line-height: 1.5;
+    }
+    
+    .terms-privacy a {
+        color: var(--light-blue);
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+    
+    .terms-privacy a:hover {
+        color: var(--navy-blue);
+    }
+    
+    .signup-btn {
+        width: 100%;
+        background-color: var(--accent-color);
+        color: var(--white);
+        padding: 12px;
+        border: none;
+        border-radius: 25px;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s;
+        box-shadow: 0 2px 10px rgba(255, 165, 0, 0.3);
+        margin-bottom: 20px;
+    }
+    
+    .signup-btn:hover {
+        background-color: #e69500;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(255, 165, 0, 0.4);
+    }
+    
+    .social-signup {
+        text-align: center;
+        margin-top: 20px;
+    }
+    
+    .social-signup p {
+        color: #666;
+        margin-bottom: 15px;
+        position: relative;
+    }
+    
+    .social-signup p::before,
+    .social-signup p::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        width: 25%;
+        height: 1px;
+        background-color: #ddd;
+    }
+    
+    .social-signup p::before {
+        left: 0;
+    }
+    
+    .social-signup p::after {
+        right: 0;
+    }
+    
+    .social-icons {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+    }
+    
+    .social-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 45px;
+        height: 45px;
+        background-color: #f5f5f5;
+        border-radius: 50%;
+        color: #333;
+        transition: all 0.3s;
+        font-size: 18px;
+        cursor: pointer;
+    }
+    
+    .social-icon:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .social-icon.facebook:hover {
+        background-color: #3b5998;
+        color: white;
+    }
+    
+    .social-icon.google:hover {
+        background-color: #db4437;
+        color: white;
+    }
+    
+    .social-icon.apple:hover {
+        background-color: #000000;
+        color: white;
+    }
+    .social-icon.linkedin:hover {
+        background-color: #0077b5;
+        color: white;
+    }
+
+    
+    .login-link {
+        text-align: center;
+        margin-top: 20px;
+    }
+    
+    .login-link p {
+        color: #666;
+    }
+    
+    .login-link a {
+        color: var(--light-blue);
+        text-decoration: none;
+        font-weight: 600;
+        transition: color 0.3s;
+    }
+    
+    .login-link a:hover {
+        color: var(--navy-blue);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        .signup-container {
+            flex-direction: column;
+        }
+        .signup-image, .signup-form-container {
+            flex: 1 1 100%;
+            border-radius: 0;
+        }
+        .signup-image {
+            padding: 30px 20px;
+        }
+        .signup-form-container {
+            padding: 30px 20px;
+        }
+    }
+</style>
+</head>
+<body>
+
+<section class="signup-section">
+    <div class="signup-container">
+        <div class="signup-image">
+            <h2>Join HopeHarbor</h2>
+            <p>Become a donor and help us change lives. Your contribution can bring hope and support to those in need.</p>
+            <div class="impact-stories">
+                <div class="story-item">
+                    <h3>Jane Doe</h3>
+                    <p>"Donating through HopeHarbor was a life-changing experience."</p>
+                </div>
+                <div class="story-item">
+                    <h3>John Smith</h3>
+                    <p>"I feel proud to contribute to such a worthy cause."</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="signup-form-container">
+            <div class="signup-header">
+                <h2>Donor Signup</h2>
+                <p>Create your HopeHarbor account</p>
+            </div>
+
+            <form class="signup-form" action="http://localhost:3000/signup" method="POST" autocomplete="off">
+                <div class="form-group">
+                    <label for="fullName">Full Name <span class="optional">*</span></label>
+                    <input type="text" id="fullName" name="fullName" placeholder="Your full name" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email <span class="optional">*</span></label>
+                    <input type="email" id="email" name="email" placeholder="your@email.com" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number <span class="optional"></span></label>
+                    <input type="tel" id="phone" name="phone" placeholder="Number" />
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password <span class="optional">*</span></label>
+                    <input type="password" id="password" name="password" placeholder="Enter password" required minlength="6" />
+                </div>
+
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password <span class="optional">*</span></label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm password" required minlength="6" />
+                </div>
+
+                <div class="form-group">
+                    <label for="country">Country <span class="optional">*</span></label>
+                    <select id="country" name="country" required>
+                        <option value="" disabled selected>Select your country</option>
+                        <!-- Common countries, excluding Iran -->
+                        <option value="United States">United States</option>
+                        <option value="Canada">Canada</option>
+                        <option value="United Kingdom">United Kingdom</option>
+                        <option value="Australia">Australia</option>
+                        <option value="Germany">Germany</option>
+                        <option value="France">France</option>
+                        <option value="India">India</option>
+                        <option value="Brazil">Brazil</option>
+                        <option value="Mexico">Mexico</option>
+                        <option value="Japan">Japan</option>
+                        <option value="South Korea">South Korea</option>
+                        <option value="South Africa">South Africa</option>
+                        <option value="Netherlands">Netherlands</option>
+                        <option value="Italy">Italy</option>
+                        <option value="Spain">Spain</option>
+                        <option value="Sweden">Sweden</option>
+                        <option value="Switzerland">Switzerland</option>
+                        <option value="New Zealand">New Zealand</option>
+                        <option value="Russia">Russia</option>
+                        <option value="Bangladesh">Bangladesh</option>
+                        <!-- Add more countries as needed -->
+                    </select>
+                </div>
+
+                <div class="terms-privacy">
+                    <input type="checkbox" id="terms" name="terms" required />
+                    <label for="terms">I agree to the <a href="#" target="_blank">Terms & Conditions</a> and <a href="#" target="_blank">Privacy Policy</a>.</label>
+                </div>
+
+                <button type="submit" class="signup-btn">Sign Up</button>
+            </form>
+
+            <div class="login-link">
+                <p>Already have an account? <a href="login.html">Log In</a></p>
+            </div>
+
+            <div class="social-signup">
+                <p>Or sign up with</p>
+                <div class="social-icons">
+                    <div class="social-icon facebook" title="Sign up with Facebook">&#xf09a;</div>
+                    <div class="social-icon google" title="Sign up with Google">&#xf1a0;</div>
+                    <div class="social-icon apple" title="Sign up with Apple">&#xf179;</div>
+                    <div class="social-icon linkedin" title="Sign up with LinkedIn">&#xf0e1;</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Font Awesome CDN for social icons -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+</body>
+</html>

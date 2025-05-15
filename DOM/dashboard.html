@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Donor Dashboard - HopeHarbor</title>
+  <link rel="stylesheet" href="dashboard.css" />
+</head>
+<body>
+  <header class="dashboard-header">
+    <h1>Welcome, <span id="donor-name">Donor</span>!</h1>
+    <p>Your impact starts here at HopeHarbor ❤</p>
+  </header>
+
+  <section class="profile-section">
+    <h2>Your Profile</h2>
+    <ul>
+      <li><strong>Email:</strong> <span id="donor-email"></span></li>
+      <li><strong>Phone:</strong> <span id="donor-phone"></span></li>
+      <li><strong>Country:</strong> <span id="donor-country"></span></li>
+    </ul>
+  </section>
+
+  <section class="donations-section">
+    <h2>Recent Donations</h2>
+    <ul id="donation-list">
+      <li>No donations yet.</li>
+    </ul>
+  </section>
+
+  <script>
+    // Simulate data passed from backend (replace with real fetch in future)
+    const donor = {
+      name: "John Doe",
+      email: "john@example.com",
+      phone: "+1 123 456 7890",
+      country: "United States",
+      donations: [
+        { org: "Clean Water Initiative", amount: "$50", date: "2025-04-25" },
+        { org: "Food for All", amount: "$30", date: "2025-03-15" }
+      ]
+    };
+
+    document.getElementById("donor-name").textContent = donor.name;
+    document.getElementById("donor-email").textContent = donor.email;
+    document.getElementById("donor-phone").textContent = donor.phone;
+    document.getElementById("donor-country").textContent = donor.country;
+
+    const donationList = document.getElementById("donation-list");
+    donationList.innerHTML = "";
+
+    donor.donations.forEach(d => {
+      const li = document.createElement("li");
+      li.textContent = ${d.date}: Donated ${d.amount} to ${d.org};
+      donationList.appendChild(li);
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+/* Reset and base styles */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f7f9fb;
+  color: #333;
+}
+
+header.dashboard-header {
+  background-color: #1e88e5;
+  color: white;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-header h1 {
+  margin: 0 0 0.5rem;
+  font-size: 2rem;
+}
+
+.dashboard-header p {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+/* Section Styling */
+section {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+h2 {
+  color: #1e88e5;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 0.5rem;
+}
+
+/* Profile Info */
+.profile-section ul,
+.donations-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.profile-section li,
+.donations-section li {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #eee;
+  font-size: 1rem;
+}
+
+.profile-section li strong {
+  display: inline-block;
+  width: 100px;
+  color: #555;
+}
+
+/* Donation List */
+.donations-section li {
+  padding-left: 1rem;
+  position: relative;
+}
+
+.donations-section li::before {
+  content: "💝";
+  position: absolute;
+  left: 0;
+  top: 0.8rem;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .dashboard-header h1 {
+    font-size: 1.5rem;
+  }
+
+  section {
+    margin: 1rem;
+    padding: 1rem;
+  }
+}

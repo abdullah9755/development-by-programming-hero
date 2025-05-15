@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HopeHarbor - Health Organizations</title>
+    <link rel="stylesheet" href="health.css">
+    
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="/api/placeholder/38/38" alt="HopeHarbor Logo">
+            <h1>HopeHarbor</h1>
+        </div>
+        
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Categories</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+        
+        <div class="auth-buttons">
+            <a href="login.html" class="dropdown-btn">Login</a>
+            <div class="auth-dropdown">
+                <a class="dropdown-btn">Sign Up</a>
+                <div class="dropdown-content">
+                    <a href="Dsignup.html">Sign Up as Donor</a>
+                    <a href="Osignup.html">Sign Up as Organization</a>
+                </div>
+            </div>
+            <div class="user-dropdown">
+                <a class="user-icon" href="dashboard.html"><i class="fas fa-user"></i></a>
+                
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Category Header Section -->
+    <section class="category-header">
+        <div class="category-icon">
+            <i class="fas fa-heartbeat"></i>
+        </div>
+        <h1>Health Organizations</h1>
+        <p>Support organizations dedicated to providing medical care, treatments, and health services for children and vulnerable populations around the world.</p>
+    </section>
+    
+    <!-- Filter Bar Section -->
+    <div class="filter-bar">
+        <form id="filter-form">
+            <div class="filter-group">
+                <label for="location">Location</label>
+                <select id="location" name="location">
+                    <option value="">All Locations</option>
+                    <option value="usa">United States</option>
+                    <option value="india">India</option>
+                    <option value="africa">Africa</option>
+                    <option value="asia">Asia</option>
+                    <option value="europe">Europe</option>
+                    <option value="Bangladesh"></option>
+                </select>
+            </div>
+            
+            
+            
+            <div class="filter-group">
+                <label for="sort">Sort By</label>
+                <select id="sort" name="sort">
+                    <option value="relevance">Relevance</option>
+                    <option value="most-funded">Most Funded</option>
+                    <option value="newest">Newest</option>
+                    <option value="oldest">Oldest</option>
+                </select>
+            </div>
+            
+            <button type="submit" class="search-btn">Apply Filters</button>
+        </form>
+    </div>
+    
+    <!-- Organizations List Section -->
+    <section class="organizations-container">
+        <div class="organizations-list">
+            <!-- Organization Card 1 -->
+            <div class="organization-card" data-id="org1" data-location="usa" data-focus="childrens-health">
+                <div class="org-banner">
+                    <div class="org-logo">
+                        <i class="fas fa-hospital"></i>
+                    </div>
+                    <div class="org-verified">
+                        <i class="fas fa-check-circle"></i> Verified
+                    </div>
+                </div>
+                <div class="org-info">
+                    <h3 class="org-name">Children's Health Foundation</h3>
+                    <div class="org-location">
+                        <i class="fas fa-map-marker-alt"></i>USA
+                    </div>
+                    <div class="org-stats">
+                        <div class="stat">
+                            <span class="stat-value">$2.5M</span>
+                            <span class="stat-label">Raised</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-value">5K</span>
+                            <span class="stat-label">Donors</span>
+                        </div>
+                    </div>
+                    <p class="org-description">Providing essential healthcare services to underserved children across the country through mobile clinics and permanent healthcare centers.</p>
+                    <div class="org-actions">
+            
+                        <a href="#" class="donate-btn" data-orgid="org1" data-name="Children's Health Foundation"><i class="fas fa-hand-holding-heart"></i> Donate</a>
+                    </div>
+                </div>
+            </div>
+            
+            

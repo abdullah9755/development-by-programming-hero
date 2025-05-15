@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organization Signup</title>
+    <link rel="stylesheet" href="osingup.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="/api/placeholder/38/38" alt="HopeHarbor Logo">
+            <h1>HopeHarbor</h1>
+        </div>
+        
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Categories</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+        
+        <div class="auth-buttons">
+            <div class="auth-dropdown">
+                <button class="dropdown-btn" ><a  href="dsignup.html" style="color: white;" >Signup as a Doner</a> <i class="fas fa-chevron-down"></i></button>
+                
+            </div>
+            
+            <div class="auth-dropdown">
+                <button class="dropdown-btn"><a href="dsignup.html"></a><i class="fas fa-chevron-down"></i></button>
+                
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Signup Section -->
+    <section class="signup-section">
+        <div class="signup-container">
+            <div class="signup-image">
+                <h2>Join our Network of Changemakers</h2>
+                <p>By registering your organization with HopeHarbor, you gain access to our global community of donors passionate about making a difference.</p>
+                
+                <div class="impact-stories">
+                    <div class="story-item">
+                        <h3>Global Reach</h3>
+                        <p>"Connect with donors worldwide who are eager to support impactful causes like yours."</p>
+                    </div>
+                    <div class="story-item">
+                        <h3>Seamless Donations</h3>
+                        <p>"Receive funds directly through secure payment channels with minimal processing fees."</p>
+                    </div>
+                    <div class="story-item">
+                        <h3>Enhanced Visibility</h3>
+                        <p>"Showcase your mission, programs, and impact to thousands of potential supporters on our platform."</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="signup-form-container">
+                <div class="signup-header">
+                    <h2>Register Your Organization</h2>
+                    <p>Join our community of 250+ organizations making positive change</p>
+                </div>
+                
+                <form class="signup-form">
+                    <div class="form-group">
+                        <label for="org-name">Organization Name</label>
+                        <input type="text" id="org-name" placeholder="Enter your organization name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="org-id">Organization ID/Registration Number</label>
+                        <input type="text" id="org-id" placeholder="Enter official registration number" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="org-type">Organization Type</label>
+                        <select id="org-type" class="country-select" required>
+                            <option value="" disabled selected>Select organization type</option>
+                            <option value="ngo">Non-Governmental Organization (NGO)</option>
+                            <option value="nonprofit">Nonprofit Organization</option>
+                            <option value="foundation">Foundation</option>
+                            <option value="charity">Charitable Trust</option>
+                            <option value="social">Social Enterprise</option>
+                            <option value="community">Community-Based Organization</option>
+                            <option value="educational">Educational Institution</option>
+                            <option value="religious">Religious Organization</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Official Email Address</label>
+                        <input type="email" id="email" placeholder="Enter organization email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="org-description">Organization Description</label>
+                        <textarea id="org-description" placeholder="Briefly describe what your organization does..." required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="country">Country</label>
+                        <select id="country" class="country-select" required>
+                            <option value="" disabled selected>Select your country</option>
+                            <option value="af">Afghanistan</option>
+                            <option value="al">Albania</option>
+                            <option value="dz">Algeria</option>
+                            <option value="ar">Argentina</option>
+                            <option value="au">Australia</option>
+                            <option value="at">Austria</option>
+                            <option value="bd">Bangladesh</option>
+                            <option value="be">Belgium</option>
+                            <option value="br">Brazil</option>
+                            <option value="ca">Canada</option>
+                            <option value="cl">Chile</option>
+                            <option value="cn">China</option>
+                            <option value="co">Colombia</option>
+                            <option value="dk">Denmark</option>
+                            <option value="eg">Egypt</option>
+                            <option value="fr">France</option>
+                            <option value="de">Germany</option>
+                            <option value="gr">Greece</option>
+                            <option value="in">India</option>
+                            <option value="id">Indonesia</option>
+                            <option value="ir">Iran</option>
+                            <option value="it">Italy</option>
+                            <option value="jp">Japan</option>
+                            <option value="ke">Kenya</option>
+                            <option value="mx">Mexico</option>
+                            <option value="ng">Nigeria</option>
+                            <option value="pk">Pakistan</option>
+                            <option value="ph">Philippines</option>
+                            <option value="pl">Poland</option>
+                            <option value="ru">Russia</option>
+                            <option value="sa">Saudi Arabia</option>
+                            <option value="sg">Singapore</option>
+                            <option value="za">South Africa</option>
+                            <option value="kr">South Korea</option>
+                            <option value="es">Spain</option>
+                            <option value="se">Sweden</option>
+                            <option value="ch">Switzerland</option>
+                            <option value="th">Thailand</option>
+                            <option value="tr">Turkey</option>
+                            <option value="ae">United Arab Emirates</option>
+                            <option value="gb">United Kingdom</option>
+                            <option value="us">United States</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="payment-gateway">Payment Gateway Link</label>
+                        <input type="text" id="payment-gateway" placeholder="Enter your payment gateway URL" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="org-website">Organization Website <span class="optional">(Optional)</span></label>
+                        <input type="url" id="org-website" placeholder="Enter your website URL">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <div class="password-container">
+                            <input type="password" id="password" placeholder="Create a strong password" required>
+                            <i class="fas fa-eye-slash toggle-password"></i>
+                        </div>
+                        <div class="password-strength">
+                            <div class="strength-meter">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <div class="strength-text">Password strength</div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="confirm-password">Confirm Password</label>
+                        <div class="password-container">
+                            <input type="password" id="confirm-password" placeholder="Confirm your password" required>
+                            <i class="fas fa-eye-slash toggle-password"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="referral-source">How did you hear about us? <span class="optional">(Optional)</span></label>
+                        <select id="referral-source" class="country-select">
+                            <option value="" disabled selected>Select an option</option>
+                            <option value="search">Search Engine</option>
+                            <option value="social">Social Media</option>
+                            <option value="referral">Referral from another organization</option>
+                            <option value="event">Conference or Event</option>
+                            <option value="media">News or Media</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="terms-privacy">
+                        <input type="checkbox" id="terms" required>
+                        <label for="terms">I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>. I confirm that my organization information is accurate and valid.</label>
+                    </div>
+                    
+                    <button type="submit" class="signup-btn">Register Organization</button>
+                    
+                    <div class="login-link">
+                        <p>Already registered? <a href="login.html">Log in </a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo-section">
+                <div class="footer-logo">
+                    <img src="/api/placeholder/180/40" alt="HopeHarbor Logo">
+                </div>
+                <p class="footer-description">
+                    HopeHarbor is dedicated to improving the lives of children worldwide through sustainable programs and initiatives.
+                </p>
+            </div>
+            
+            <div class="footer-section">
+                <h3 class="footer-heading">About Us</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Our Mission</a></li>
+                    <li><a href="#">Our Team</a></li>
+                    <li><a href="#">Our Partners</a></li>
+                    <li><a href="#">Financial Reports</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3 class="footer-heading">Our Work</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Health Programs</a></li>
+                    <li><a href="#">Education Initiatives</a></li>
+                    <li><a href="#">Housing Projects</a></li>
+                    <li><a href="#">Success Stories</a></li>
+                </ul>
+            </div>
+</html>
